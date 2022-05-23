@@ -15,12 +15,12 @@ const Header = () => {
           setTheme(theme === "dark" ? "light" :"dark")
           }}
           className={`${
-            enabled ? 'bg-gray-800 shadow-md shadow-black' : 'bg-gray-600 shadow-gray-500 hover:bg-gray-700 shadow-md'
+            theme === "dark" ? 'bg-gray-800 shadow-md shadow-black' : 'bg-gray-600 shadow-gray-500 hover:bg-gray-700 shadow-md'
           } relative inline-flex h-7 w-12 items-center rounded-full  transition-shadow ease-in-out duration-200`}
           >
           <span
           
-          className={`${enabled ? 'translate-x-6 bg-gray-500' : 'translate-x-1 bg-gray-200'}
+          className={`${theme === "dark" ? 'translate-x-6 bg-gray-500' : 'translate-x-1 bg-gray-200'}
           pointer-events-none inline-block h-5 w-5 transform rounded-full  shadow-lg ring-0 transition duration-200 ease-in-out`}
       
         />
