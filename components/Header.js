@@ -11,7 +11,7 @@ const Header = () => {
         <Switch
           checked ={enabled}
           onChange={() => {  
-          setEnabled(enabled)
+          setEnabled(!enabled)
           setTheme(theme === "dark" ? "light" :"dark")
           }}
           className={`${
