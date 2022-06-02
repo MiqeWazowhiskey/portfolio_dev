@@ -64,17 +64,17 @@ export default function Home({ starredRepositories }) {
             </div>
             
             <h2 className="mt-10 font-bold text-lg md:text-3xl mb-5">Starred Repos</h2>
-            <div className="flex md:flex-row flex-wrap space-x-5 border  shadow-lg  shadow-red-200 px-4 py-6 rounded-3xl mb-5 dark:shadow-teal-400">
+            <div className="flex-row flex-wrap space-x-6 border  shadow-lg  shadow-red-200 px-4 py-6 rounded-3xl mb-5 dark:shadow-teal-400">
            
             {starredRepositories.map(repo =>{
                 return(
-                    < motion.a key={ repo.id } href={repo.url} target={"_blank"} rel="noopener noreferrer" className= " hover:" whileHover={{scale: 1.07}}>
+                    < motion.a className="flex mx-5" key={ repo.id } href={repo.url} target={"_blank"} rel="noopener noreferrer" whileHover={{scale: 1.07}}>
                       
-                      <div className= "shadow-xl shadow-gray-500 p-4 rounded-lg dark:shadow-black mt-5">
+                      <div className= "shadow-xl shadow-gray-500 p-4 rounded-lg dark:shadow-black mt-5"  >
               
                         <h2 className="text-lg text-center font-bold md:text-xl mb-2">{repo.name}</h2>
                           <div className="justify-center flex space-x-8 text-sm">
-                            <p className="flex flex-wrap">{repo.description}</p>
+                            <p>{repo.description}</p>
                             <p>⭐{repo.stargazerCount}</p>
                           </div>
                       </div>
