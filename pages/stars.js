@@ -27,7 +27,7 @@ export default function Home({ starredRepositories }) {
 
                     < motion.a className="flex mx-5" key={ repo.id } href={repo.url} target={"_blank"} rel="noopener noreferrer" whileHover={{scale: 1.07}}>
                       
-                      <div className= "ml-4 shadow-xl border border-white shadow-gray-500 p-4 rounded-lg dark:shadow-black mt-5"  >
+                      <div className= "w-full ml-4 shadow-xl border border-white shadow-gray-500 p-4 rounded-lg dark:shadow-black mt-5"  >
               
                         <h2 className="text-lg text-center font-bold md:text-xl mb-2">{repo.name}</h2>
                           <div className="justify-center flex space-x-8 text-sm">
