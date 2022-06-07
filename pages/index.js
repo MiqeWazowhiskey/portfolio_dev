@@ -55,11 +55,7 @@ export default function Home({ starredRepositories }) {
               </motion.a>
             </div>
           </div>
-          <div className="pt-5">
-            <motion.a className="flex justify-center text-lg font-bold dark:hover:text-green-500 hover:text-orange-300" href="stars" whileHover={{scale: 1.1}}>
-              Starred Repos
-            </motion.a>
-          </div>
+        
         </section>
       </main>
       

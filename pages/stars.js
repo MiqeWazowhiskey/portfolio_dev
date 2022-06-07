@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import react from "react"
 import Layout from "../components/Layout"
 import Link from 'next/link'
+import Typical from 'react-typical'
 
 
 
@@ -13,24 +14,22 @@ import {
 } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
 
+
 export default function Home({ starredRepositories }) {
   return (
     <Layout title={"Portfolio"} description={"Starred Github Repos"}>
-        <div className="flex justify-end pr-5 pt-3">
-        <h3><motion.a whileHover={{scale: 1.07}} href="/" className=" text-bold text-2xl flex dark:hover:text-green-500 hover:text-orange-300  border border-transparent ">Home</motion.a></h3>
-        </div>
-           <div className=" border border-white shadow-xl shadow-gray-500 dark:shadow-black rounded-xl flex flex-wrap mt-3 pb-5">
+           <div className="justify-center  pl-4 flex flex-wrap  rounded-xl  mt-3 pb-5">
            
             {starredRepositories.map(repo =>{
                 return(
                     
 
-                    < motion.a className="flex mx-5" key={ repo.id } href={repo.url} target={"_blank"} rel="noopener noreferrer" whileHover={{scale: 1.07}}>
+                    < motion.a className="flex flex-wrap  justify-center mx-5" key={ repo.id } href={repo.url} target={"_blank"} rel="noopener noreferrer" whileHover={{scale: 1.07}}>
                       
-                      <div className= "w-full ml-4 shadow-xl border border-white shadow-gray-500 p-4 rounded-lg dark:shadow-black mt-5"  >
+                      <div className= "w-96 shadow-xl border border-white shadow-gray-500 p-4 rounded-lg dark:shadow-black mt-5"  >
               
                         <h2 className="text-lg text-center font-bold md:text-xl mb-2">{repo.name}</h2>
-                          <div className="justify-center flex space-x-8 text-sm">
+                          <div className="justify-center flex space-x-8 text-sm ">
                             <p>{repo.description}</p>
                             <p>⭐{repo.stargazerCount}</p>
                           </div>

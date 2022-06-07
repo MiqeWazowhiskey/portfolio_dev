@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Switch } from '@headlessui/react';
 import { useTheme } from 'next-themes';
 const Header = () => {
@@ -7,7 +8,14 @@ const Header = () => {
   return (
 
     <header className='flex items-center justify-between text-white px-6 py-4 h-1 max-w-8xl mx-auto mt-8 bg-transparent'>
-       <span></span> 
+        <div className="flex flex-wrap justify-center pr-5 pt-3">
+          <motion.a className="flex justify-center text-lg font-bold dark:hover:text-green-500 hover:text-orange-300 mr-5 text-gray-700 dark:text-gray-200" href="stars" whileHover={{scale: 1.1}}>
+                Starred Repos
+          </motion.a>
+          <h3>
+            <motion.a whileHover={{scale: 1.07}} href="/" className=" text-bold text-lg text-gray-700 dark:text-gray-200 font-bold flex dark:hover:text-green-500 hover:text-orange-300  border border-transparent ">Home</motion.a>
+          </h3>
+        </div>
         <Switch
           checked ={enabled}
           onChange={() => {  
@@ -26,11 +34,6 @@ const Header = () => {
       
         />
         </Switch> 
-          
-
-        
-
-
     </header>
   )
 }
